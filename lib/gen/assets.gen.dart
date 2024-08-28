@@ -22,6 +22,7 @@ class Assets {
   static const AssetGenImage likes = AssetGenImage('assets/likes.png');
   static const AssetGenImage profile = AssetGenImage('assets/profile.png');
   static const AssetGenImage radio = AssetGenImage('assets/radio.png');
+  static const AssetGenImage settings = AssetGenImage('assets/settings.png');
   static const AssetGenImage speaker = AssetGenImage('assets/speaker.png');
 
   /// List of all assets
@@ -35,6 +36,7 @@ class Assets {
         likes,
         profile,
         radio,
+        settings,
         speaker
       ];
 }
