@@ -42,7 +42,7 @@ class _DashboardState extends State<Dashboard> {
               controller.animateToPage(index, duration: Duration(milliseconds: 250), curve: Curves.easeInOut);
               currentPage.value = index;
             },
-            backgroundColor: AppColor.primary,
+            backgroundColor: Color(0xFF1C1E22),
             type: BottomNavigationBarType.fixed,
             selectedLabelStyle: TextStyle(
               fontSize: 13,
@@ -57,35 +57,35 @@ class _DashboardState extends State<Dashboard> {
             items: [
               BottomNavigationBarItem(
                   icon: Padding(
-                    padding: EdgeInsets.only(bottom: 4),
+                    padding: EdgeInsets.only(bottom: 4, top: 4),
                     child: Assets.home.image(height: 24,color: value == 0 ? Colors.white : AppColor.iconColor),
                   ),
                   label: 'Home',
               ),
               BottomNavigationBarItem(
                   icon: Padding(
-                    padding: EdgeInsets.only(bottom: 4),
+                    padding: EdgeInsets.only(bottom: 4, top: 4),
                     child: Assets.feeds.image(height: 24,color: value == 1 ? Colors.white : AppColor.iconColor),
                   ),
                   label: 'Feeds'
               ),
               BottomNavigationBarItem(
                   icon: Padding(
-                    padding: EdgeInsets.only(bottom: 4),
+                    padding: EdgeInsets.only(bottom: 4, top: 4),
                     child: Assets.likes.image(height: 24,color: value == 2 ? Colors.white : AppColor.iconColor),
                   ),
                   label: 'Likes'
               ),
               BottomNavigationBarItem(
                   icon: Padding(
-                    padding: EdgeInsets.only(bottom: 4),
+                    padding: EdgeInsets.only(bottom: 4, top: 4),
                     child: Assets.carts.image(height: 24,color: value == 3 ? Colors.white : AppColor.iconColor),
                   ),
                   label: 'Carts'
               ),
               BottomNavigationBarItem(
                   icon: Padding(
-                    padding: EdgeInsets.only(bottom: 4),
+                    padding: EdgeInsets.only(bottom: 4, top: 4),
                     child: Assets.profile.image(height: 24,color: value == 4 ? Colors.white : AppColor.iconColor),
                   ),
                   label: 'Profile'
