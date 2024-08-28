@@ -1,3 +1,4 @@
+import 'package:electis_shopping/screens/dashboard/home_page.dart';
 import 'package:electis_shopping/theme/app_color.dart';
 import 'package:flutter/material.dart';
 
@@ -17,18 +18,20 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(
-        controller: controller,
-        onPageChanged: (page){
-          currentPage.value = page;
-        },
-        children: [
-          Center(child: Text("Home", style: TextStyle(color: AppColor.textColor),),),
-          Center(child: Text("Feed", style: TextStyle(color: AppColor.textColor),),),
-          Center(child: Text("Likes", style: TextStyle(color: AppColor.textColor),),),
-          Center(child: Text("Carts", style: TextStyle(color: AppColor.textColor),),),
-          Center(child: Text("Profile", style: TextStyle(color: AppColor.textColor),),),
-        ],
+      body: SafeArea(
+        child: PageView(
+          controller: controller,
+          onPageChanged: (page){
+            currentPage.value = page;
+          },
+          children: [
+            HomePage(),
+            Center(child: Text("Feed", style: TextStyle(color: AppColor.textColor),),),
+            Center(child: Text("Likes", style: TextStyle(color: AppColor.textColor),),),
+            Center(child: Text("Carts", style: TextStyle(color: AppColor.textColor),),),
+            Center(child: Text("Profile", style: TextStyle(color: AppColor.textColor),),),
+          ],
+        ),
       ),
       bottomNavigationBar: ValueListenableBuilder<int>(
         valueListenable: currentPage,
