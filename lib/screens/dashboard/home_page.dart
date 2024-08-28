@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:electis_shopping/data/product.dart';
 import 'package:electis_shopping/theme/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
@@ -294,8 +295,9 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(20.0),
-                            child: Assets.camera.image(
-                              height: 90
+                            child: Product.allProducts[i%3].photo.image(
+                              height: 90,
+                              width: 90,
                             ),
                           ),
                           Positioned(
@@ -346,7 +348,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     SizedBox(height: 16,),
                     Text(
-                      'Sony Alpha 9 Mark III\nBody Only',
+                      Product.allProducts[i%3].name,
                       style: TextStyle(
                         color: AppColor.textColor,
                         fontSize: 14,
@@ -355,7 +357,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     SizedBox(height: 3,),
                     Text(
-                      'RP 24.500.000',
+                      Product.allProducts[i%3].price,
                       style: TextStyle(
                         color: AppColor.textColor,
                         fontSize: 16,
@@ -629,7 +631,7 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(20.0),
-                              child: Assets.earphone.image(
+                              child: Product.allProducts[i%3].photo.image(
                                 height: 70,
                                 width: 70,
                               ),
@@ -682,7 +684,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       SizedBox(height: 16,),
                       Text(
-                        'Mini Sport Earphone\nColorful Capsule',
+                        Product.allProducts[i%3].name,
                         style: TextStyle(
                             color: AppColor.textColor,
                             fontSize: 12,
@@ -691,7 +693,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       SizedBox(height: 3,),
                       Text(
-                        'RP 749.000',
+                        Product.allProducts[i%3].price,
                         style: TextStyle(
                             color: AppColor.textColor,
                             fontSize: 14,
