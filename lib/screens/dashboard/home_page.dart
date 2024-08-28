@@ -534,7 +534,7 @@ class _HomePageState extends State<HomePage> {
                           Spacer(),
                           Neumorphic(
                             child: Container(
-                              padding: EdgeInsets.all(3),
+                              padding: EdgeInsets.all(4),
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
@@ -558,8 +558,6 @@ class _HomePageState extends State<HomePage> {
                             style: NeumorphicStyle(
                               depth: -1,
                               color: Color(0xFF212327),
-                              shadowLightColorEmboss: Color(0xFF0A0A0F),
-                              shadowDarkColorEmboss: Color(0xFF0A0A0F),
                               boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(20))
                             ),
                           ),
