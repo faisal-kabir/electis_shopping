@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:electis_shopping/data/product.dart';
 import 'package:electis_shopping/screens/dashboard/gadget_day.dart';
+import 'package:electis_shopping/screens/dashboard/more_view.dart';
 import 'package:electis_shopping/theme/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
@@ -77,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               IconButton(
-                onPressed: (){},
+                onPressed: ()=> MoreView.showMoreView(context),
                 icon: Icon(Icons.menu, color: AppColor.textColor,)
               )
             ],

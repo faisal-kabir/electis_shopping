@@ -24,6 +24,7 @@ class Assets {
   static const AssetGenImage radio = AssetGenImage('assets/radio.png');
   static const AssetGenImage settings = AssetGenImage('assets/settings.png');
   static const AssetGenImage speaker = AssetGenImage('assets/speaker.png');
+  static const AssetGenImage trophy = AssetGenImage('assets/trophy.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [
@@ -37,7 +38,8 @@ class Assets {
         profile,
         radio,
         settings,
-        speaker
+        speaker,
+        trophy
       ];
 }
 
