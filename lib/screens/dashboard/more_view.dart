@@ -34,7 +34,6 @@ class MoreView extends StatefulWidget {
 }
 
 class _MoreViewState extends State<MoreView> {
-  ValueNotifier<int> tabs = ValueNotifier(0);
 
   @override
   Widget build(BuildContext context) {

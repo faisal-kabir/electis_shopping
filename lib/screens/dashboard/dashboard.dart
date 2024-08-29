@@ -3,6 +3,7 @@ import 'package:electis_shopping/theme/app_color.dart';
 import 'package:flutter/material.dart';
 
 import '../../gen/assets.gen.dart';
+import '../cart_view.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -21,6 +22,7 @@ class _DashboardState extends State<Dashboard> {
       body: SafeArea(
         child: PageView(
           controller: controller,
+          physics: NeverScrollableScrollPhysics(),
           onPageChanged: (page){
             currentPage.value = page;
           },
@@ -39,8 +41,15 @@ class _DashboardState extends State<Dashboard> {
           return BottomNavigationBar(
             currentIndex: value,
             onTap: (index){
-              controller.animateToPage(index, duration: Duration(milliseconds: 250), curve: Curves.easeInOut);
-              currentPage.value = index;
+              if(index != 3) {
+                controller.animateToPage(
+                  index, duration: Duration(milliseconds: 250),
+                  curve: Curves.easeInOut
+                );
+                currentPage.value = index;
+              } else {
+                CartView.showMoreView(context);
+              }
             },
             backgroundColor: Color(0xFF1C1E22),
             type: BottomNavigationBarType.fixed,
